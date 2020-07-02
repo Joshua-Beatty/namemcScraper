@@ -46,7 +46,7 @@ outFile = open(outdir, "a")
 inFile = open(indir, "r")
 with inFile as a_file:
 	for line in a_file:
-		stripped_line = line.strip()
+		stripped_line = line.strip().replace("?", "")
 		if stripped_line != "":
 			status = testName(stripped_line)
 			if status == "error":
